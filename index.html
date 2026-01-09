@@ -7,7 +7,10 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="min-h-screen bg-gray-100">
-    <div class="max-w-6xl mx-auto p-4 mt-4">
+    <div class="bg-[#485696] py-4 mb-3">
+        <h1 class="text-white text-lg font-medium tracking-wide text-center">Familie Alders-Tracker</h1>
+    </div>
+    <div class="max-w-6xl mx-auto p-4">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
 
             <!-- LEFT COLUMN: Input & Members List -->
@@ -21,18 +24,18 @@
                             id="nameInput"
                             placeholder="Navn"
                             required
-                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none"
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#485696] focus:border-transparent outline-none"
                         >
                         <div class="flex gap-4">
                             <input
                                 type="date"
                                 id="birthdayInput"
                                 required
-                                class="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none"
+                                class="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#485696] focus:border-transparent outline-none"
                             >
                             <button
                                 type="submit"
-                                class="px-6 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors font-medium"
+                                class="px-6 py-2 bg-[#485696] text-white rounded-lg hover:bg-[#3a4578] transition-colors font-medium"
                             >
                                 Tilføj
                             </button>
@@ -54,7 +57,7 @@
                 <!-- Live Counter -->
                 <div class="bg-white rounded-xl shadow-md p-6 text-center">
                     <p class="text-gray-500 text-sm uppercase tracking-wide">Kombineret Alder (Live)</p>
-                    <p id="liveYears" class="text-3xl font-bold text-purple-600 mt-2 font-mono">0.00000000</p>
+                    <p id="liveYears" class="text-3xl font-bold text-[#485696] mt-2 font-mono">0.00000000</p>
                     <p class="text-gray-600">år</p>
                 </div>
 
@@ -62,12 +65,12 @@
                 <div class="grid grid-cols-2 gap-4">
                     <div class="bg-white rounded-xl shadow-md p-6 text-center">
                         <p class="text-gray-500 text-sm uppercase tracking-wide">Kombineret Alder</p>
-                        <p id="combinedYears" class="text-4xl font-bold text-purple-600 mt-2">0</p>
+                        <p id="combinedYears" class="text-4xl font-bold text-[#485696] mt-2">0</p>
                         <p class="text-gray-600">år</p>
                     </div>
                     <div class="bg-white rounded-xl shadow-md p-6 text-center">
                         <p class="text-gray-500 text-sm uppercase tracking-wide">Kombineret Alder</p>
-                        <p id="combinedDays" class="text-4xl font-bold text-purple-600 mt-2">0</p>
+                        <p id="combinedDays" class="text-4xl font-bold text-[#485696] mt-2">0</p>
                         <p class="text-gray-600">dage</p>
                     </div>
                 </div>
@@ -81,7 +84,7 @@
                         </div>
                         <button
                             onclick="generateShareLink()"
-                            class="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors font-medium flex items-center gap-2"
+                            class="px-4 py-2 bg-[#485696] text-white rounded-lg hover:bg-[#3a4578] transition-colors font-medium flex items-center gap-2"
                         >
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                                 <path d="M15 8a3 3 0 10-2.977-2.63l-4.94 2.47a3 3 0 100 4.319l4.94 2.47a3 3 0 10.895-1.789l-4.94-2.47a3.027 3.027 0 000-.74l4.94-2.47C13.456 7.68 14.19 8 15 8z" />
@@ -106,13 +109,13 @@
                                 id="targetValue"
                                 placeholder="f.eks. 30000"
                                 min="1"
-                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#485696] focus:border-transparent outline-none"
                             >
                         </div>
                         <div>
                             <select
                                 id="targetUnit"
-                                class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none"
+                                class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#485696] focus:border-transparent outline-none"
                             >
                                 <option value="days">dage</option>
                                 <option value="years">år</option>
@@ -120,13 +123,13 @@
                         </div>
                         <button
                             onclick="calculateTarget()"
-                            class="px-6 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors font-medium"
+                            class="px-6 py-2 bg-[#485696] text-white rounded-lg hover:bg-[#3a4578] transition-colors font-medium"
                         >
                             Beregn
                         </button>
                     </div>
                     <div id="targetResult" class="mt-4 hidden">
-                        <div class="p-4 bg-purple-50 border-l-4 border-purple-500 rounded-lg">
+                        <div class="p-4 bg-[#E7E7E7] border-l-4 border-[#485696] rounded-lg">
                             <p id="targetResultText" class="text-gray-800"></p>
                         </div>
                     </div>
@@ -512,7 +515,7 @@
                             </div>
                             <div class="text-right flex items-center gap-4">
                                 <div>
-                                    <p class="font-semibold text-purple-600">${years} år</p>
+                                    <p class="font-semibold text-[#485696]">${years} år</p>
                                     <p class="text-sm text-gray-500">${formatNumber(days)} dage</p>
                                 </div>
                                 <button
@@ -542,11 +545,11 @@
                 milestonesList.innerHTML = '<p class="text-gray-500 text-center py-4">Tilføj familiemedlemmer</p>';
             } else {
                 milestonesList.innerHTML = milestones.map((m, i) => `
-                    <div class="flex items-center justify-between p-3 ${i === 0 ? 'bg-purple-50 border-l-4 border-purple-500' : 'bg-gray-50'} rounded-lg">
+                    <div class="flex items-center justify-between p-3 ${i === 0 ? 'bg-[#E7E7E7] border-l-4 border-[#485696]' : 'bg-gray-50'} rounded-lg">
                         <div class="flex items-center gap-3">
                             <span class="text-lg">${m.type === 'days' ? '📅' : '🎂'}</span>
                             <div>
-                                <p class="font-semibold text-purple-600">${m.label}</p>
+                                <p class="font-semibold text-[#485696]">${m.label}</p>
                                 <p class="text-xs text-gray-500">${formatDate(m.date)} · om ${formatNumber(m.daysUntil)} dage</p>
                             </div>
                         </div>
@@ -554,7 +557,7 @@
                             <button
                                 data-calendar-btn
                                 onclick="toggleCalendarMenu(${i})"
-                                class="p-2 text-gray-400 hover:text-purple-600 hover:bg-purple-100 rounded-lg transition-colors"
+                                class="p-2 text-gray-400 hover:text-[#485696] hover:bg-[#E7E7E7] rounded-lg transition-colors"
                                 title="Tilføj til kalender"
                             >
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
