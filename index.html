@@ -500,7 +500,8 @@
             if (familyMembers.length === 0) {
                 membersList.innerHTML = '<p class="text-gray-500 text-center py-4">Ingen familiemedlemmer tilføjet endnu</p>';
             } else {
-                membersList.innerHTML = familyMembers.map(member => {
+                const sortedMembers = [...familyMembers].sort((a, b) => new Date(a.birthday) - new Date(b.birthday));
+                membersList.innerHTML = sortedMembers.map(member => {
                     const days = getAgeInDays(member.birthday);
                     const years = getAgeInYears(member.birthday);
                     return `
@@ -531,7 +532,7 @@
 
             // Calculate combined stats
             const totalDays = familyMembers.reduce((sum, m) => sum + getAgeInDays(m.birthday), 0);
-            const totalYears = Math.floor(totalDays / 365.25);
+            const totalYears = Math.floor(familyMembers.reduce((sum, m) => sum + getPreciseAgeInYears(m.birthday), 0));
             combinedYearsEl.textContent = formatNumber(totalYears);
             combinedDaysEl.textContent = formatNumber(totalDays);
 
